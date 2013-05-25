@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <b>Ingredient:</b>
+  <%= @idea.ingredient %>
+</p>
+
+<p>
+  <b>Steps:</b>
+  <%= @idea.steps %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag(@idea.image, :width => 600) if @idea.image.present? %>
+
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @idea.owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
